@@ -86,6 +86,26 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void cmdEliminar_onClick(View v) {
+        boolean r = lstAutores.Delete(
+                Integer.parseInt(txtID.getText().toString())
+        );
+
+        if (r){
+            txtID.setText("");
+            txtNombres.setText("");
+            txtApellidos.setText("");
+            txtIsoPais.setText("");
+            txtEdad.setText("");
+
+            Toast.makeText(this,"REGISTRO ELIMINADO!!",Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(this,"ERROR AL ELIMINAR!!",Toast.LENGTH_LONG).show();
+        }
+    }
+
+
 
 
 }
