@@ -67,7 +67,22 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Autor Actualizado correctamente",Toast.LENGTH_LONG).show();
         }
         else {
-            Toast.makeText(this,"ERROR AL Actualizar AUTOR!!",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"ERROR AL ACTUALIZAR AUTOR!!",Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void cmdLeer_onClick(View v) {
+        Autor r = lstAutores.Read_ById(
+                Integer.parseInt(txtID.getText().toString())
+        );
+        if(r!=null){
+            txtNombres.setText(r.Nombres);
+            txtApellidos.setText(r.Apellidos);
+            txtIsoPais.setText(r.IsoPais);
+            txtEdad.setText(String.valueOf(r.Edad));
+        }
+        else {
+            Toast.makeText(this,"REGISTRO NO ENCONTRADO!!",Toast.LENGTH_LONG).show();
         }
     }
 

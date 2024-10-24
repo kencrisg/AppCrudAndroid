@@ -146,6 +146,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="468dp"
+        android:onClick="cmdLeer_onClick"
         android:text="Leer"
         app:layout_constraintEnd_toStartOf="@+id/cmdEliminar"
         app:layout_constraintHorizontal_bias="0.477"
