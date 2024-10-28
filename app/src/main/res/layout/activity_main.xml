@@ -115,6 +115,30 @@
         app:layout_constraintTop_toBottomOf="@+id/txtID" />
 
     <Button
+        android:id="@+id/cmdActualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="40dp"
+        android:onClick="cmdActualizar_onClick"
+        android:text="Actualizar"
+        app:layout_constraintBottom_toTopOf="@+id/cmdEliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.964" />
+
+    <Button
+        android:id="@+id/cmdEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="76dp"
+        android:onClick="cmdEliminar_onClick"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/cmdCrear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -123,44 +147,47 @@
         android:text="Crear"
         app:layout_constraintBottom_toTopOf="@+id/cmdLeer"
         app:layout_constraintEnd_toStartOf="@+id/cmdActualizar"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.969" />
-
-    <Button
-        android:id="@+id/cmdActualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="40dp"
-        android:text="Actualizar"
-        app:layout_constraintBottom_toTopOf="@+id/cmdEliminar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.967" />
+        app:layout_constraintVertical_bias="0.964" />
 
     <Button
         android:id="@+id/cmdLeer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="468dp"
+        android:layout_marginTop="428dp"
         android:onClick="cmdLeer_onClick"
         android:text="Leer"
         app:layout_constraintEnd_toStartOf="@+id/cmdEliminar"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/cmdEliminar"
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:id="@+id/tableLayoutLibros"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="468dp"
-        android:layout_marginEnd="76dp"
-        android:onClick="cmdEliminar_onClick"
-        android:text="Eliminar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="16dp"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.727"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TableRow>
+
+            <TextView android:text="Título Libro" />
+
+            <TextView android:text="ISBN" />
+
+            <TextView android:text="Año" />
+
+            <TextView android:text="Revisión" />
+
+            <TextView android:text="Nro Hojas" />
+
+        </TableRow>
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
