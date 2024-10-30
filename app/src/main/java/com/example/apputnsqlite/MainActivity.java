@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     EditText txtApellidos, txtNombres, txtID, txtIsoPais, txtEdad;
+    TextView lblTitulo;
     TableLayout tableLayoutLibros;
     Libros lstLibros;
     Autores lstAutores;
@@ -38,9 +39,14 @@ public class MainActivity extends AppCompatActivity {
         txtIsoPais = findViewById(R.id.txtisoPais);
         txtEdad = findViewById(R.id.txtEdad);
         tableLayoutLibros = findViewById(R.id.tableLayoutLibros);
-
+        lblTitulo = findViewById(R.id.lblTitulo);
         lstAutores=new Autores(this,"biblioteca.db", 1);
         lstLibros = new Libros(this, "biblioteca.db", 1);
+
+        //Leer los datos del diccionario
+        Bundle extra = getIntent().getExtras();
+        lblTitulo.setText("Bienvenido " + extra.getString("usuario"));
+
 
 
     }
@@ -166,6 +172,10 @@ public class MainActivity extends AppCompatActivity {
         textView.setText(text);
         textView.setPadding(8, 8, 8, 8);
         return textView;
+    }
+
+    public void cmdRegresar_onClick(View v){
+        finish();
     }
 
 
