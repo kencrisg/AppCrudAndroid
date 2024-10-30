@@ -176,17 +176,11 @@
         tools:layout_editor_absoluteX="0dp">
 
         <TableRow>
-
             <TextView android:text="Título Libro" />
-
             <TextView android:text="ISBN" />
-
             <TextView android:text="Año" />
-
             <TextView android:text="Revisión" />
-
             <TextView android:text="Nro Hojas" />
-
         </TableRow>
     </TableLayout>
 

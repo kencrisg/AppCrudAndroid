@@ -55,27 +55,26 @@ public class MainActivity extends AppCompatActivity {
         );
         if(r!=null){
             Toast.makeText(this,"Autor creado correctamente",Toast.LENGTH_LONG).show();
-            // Crear un libro para el autor creado
-            // Crear varios libros para el autor creado
-            Libro libro1 = lstLibros.Create(
-                    10, // Cambia a un ID único o autogenerado para evitar conflictos
-                    "Libro de Prueba 1",
-                    r.Id, // ID del autor
-                    "ISBN123456", // ISBN ficticio
-                    2024, // Año de publicación
-                    1, // Revisión
-                    100 // Número de hojas
-            );
 
-            Libro libro2 = lstLibros.Create(
-                    11, // Cambia a un ID único
-                    "Libro de Prueba 2",
-                    r.Id, // ID del autor
-                    "ISBN789012", // ISBN ficticio diferente
-                    2024, // Año de publicación
-                    2, // Revisión
-                    120 // Número de hojas
-            );
+//            Libro libro1 = lstLibros.Create(
+//                    10, // Cambia a un ID único o autogenerado para evitar conflictos
+//                    "Libro de Prueba 1",
+//                    r.Id, // ID del autor
+//                    "ISBN123456", // ISBN ficticio
+//                    2024, // Año de publicación
+//                    1, // Revisión
+//                    100 // Número de hojas
+//            );
+//
+//            Libro libro2 = lstLibros.Create(
+//                    11, // Cambia a un ID único
+//                    "Libro de Prueba 2",
+//                    r.Id, // ID del autor
+//                    "ISBN789012", // ISBN ficticio diferente
+//                    2024, // Año de publicación
+//                    2, // Revisión
+//                    120 // Número de hojas
+//            );
         }
         else {
             Toast.makeText(this,"ERROR AL CREAR AUTOR!!",Toast.LENGTH_LONG).show();
