@@ -115,6 +115,17 @@
         app:layout_constraintTop_toBottomOf="@+id/txtID" />
 
     <Button
+        android:id="@+id/cmdEliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="452dp"
+        android:layout_marginEnd="68dp"
+        android:onClick="cmdEliminar_onClick"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/cmdActualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -125,17 +136,30 @@
         android:text="Actualizar"
         app:layout_constraintBottom_toTopOf="@+id/cmdEliminar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEdad" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEdad"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/cmdEliminar"
+        android:id="@+id/cmdRegresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="404dp"
-        android:layout_marginEnd="68dp"
-        android:onClick="cmdEliminar_onClick"
-        android:text="Eliminar"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="516dp"
+        android:onClick="cmdRegresar_onClick"
+        android:text="Regresar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cmdLeer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="452dp"
+        android:onClick="cmdLeer_onClick"
+        android:text="Leer"
+        app:layout_constraintEnd_toStartOf="@+id/cmdEliminar"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -150,19 +174,8 @@
         app:layout_constraintEnd_toStartOf="@+id/cmdActualizar"
         app:layout_constraintHorizontal_bias="0.633"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEdad" />
-
-    <Button
-        android:id="@+id/cmdLeer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="404dp"
-        android:onClick="cmdLeer_onClick"
-        android:text="Leer"
-        app:layout_constraintEnd_toStartOf="@+id/cmdEliminar"
-        app:layout_constraintHorizontal_bias="0.58"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEdad"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TableLayout
         android:id="@+id/tableLayoutLibros"
@@ -172,7 +185,7 @@
         android:stretchColumns="*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.785"
+        app:layout_constraintVertical_bias="0.857"
         tools:layout_editor_absoluteX="0dp">
 
         <TableRow>
@@ -189,17 +202,6 @@
         </TableRow>
     </TableLayout>
 
-    <Button
-        android:id="@+id/cmdRegresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="468dp"
-        android:onClick="cmdRegresar_onClick"
-        android:text="Regresar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/lblTitulo"
         android:layout_width="wrap_content"
@@ -209,5 +211,20 @@
         android:text="TextView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/cmdLibros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="13dp"
+        android:onClick="cmdLibros_onClick"
+        android:text="Libros"
+        app:layout_constraintBottom_toTopOf="@+id/cmdCrear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEdad" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

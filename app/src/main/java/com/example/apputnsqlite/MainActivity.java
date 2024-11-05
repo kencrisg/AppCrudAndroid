@@ -1,5 +1,6 @@
 package com.example.apputnsqlite;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -44,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         lstLibros = new Libros(this, "biblioteca.db", 1);
 
         //Leer los datos del diccionario
-        Bundle extra = getIntent().getExtras();
-        lblTitulo.setText("Bienvenido " + extra.getString("usuario"));
+        //Bundle extra = getIntent().getExtras();
+        //lblTitulo.setText("Bienvenido " + extra.getString("usuario"));
 
 
 
@@ -176,6 +177,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void cmdRegresar_onClick(View v){
         finish();
+    }
+
+    public void cmdLibros_onClick(View v){
+        Intent i = new Intent(this, LibrosActivity.class);
+        startActivity(i);
+
     }
 
 
